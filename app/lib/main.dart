@@ -1,5 +1,6 @@
 import 'package:app/Notes%20view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const NoteApp());
@@ -10,12 +11,15 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
+    return ScreenUtilInit(
+      designSize: Size(360, 690),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.dark,
+        ),
+        home: NoteView(),
       ),
-      home: NoteView(),
     );
   }
 }
