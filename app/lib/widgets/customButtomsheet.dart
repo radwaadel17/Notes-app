@@ -11,7 +11,9 @@ class customButtomsheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 15.h,),
-          const customTextField(),
+          const customTextField(txt: 'Title',),
+          SizedBox(height: 15.h,),
+          const customTextField(txt: 'Content' , mx: 5 ,),
         ],
       ),
     );
