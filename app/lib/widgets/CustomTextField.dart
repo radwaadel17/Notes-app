@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class customTextField extends StatelessWidget {
-  const customTextField({super.key , required this.txt , this.mx = 1} );
+  const customTextField({super.key , required this.txt , this.mx = 1, this.onSaved} );
   final String txt ;
   final int mx ;
+  final void Function(String?)? onSaved ;
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if(value?.isEmpty ?? true){
+          return 'This field is required';
+        }else{
+           return null;
+        }
+      },
       maxLines:mx,
       cursorColor: const Color(0xff62FCD7),
       decoration: InputDecoration(
         hintText: txt,
+        border: OutlineInputBorder(
+          borderSide: const BorderSide(color: Color(0xff62FCD7)),
+          borderRadius: BorderRadius.circular(10.r),
+        ),
         focusedBorder:OutlineInputBorder(
           borderSide: const BorderSide(color: Color(0xff62FCD7)),
           borderRadius: BorderRadius.circular(10.r),
