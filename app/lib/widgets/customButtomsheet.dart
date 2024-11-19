@@ -9,15 +9,18 @@ class customButtomsheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w , vertical: 16.h),
-      child: Column(
-        children: [
-          SizedBox(height: 15.h,),
-          const customTextField(txt: 'Title',),
-          SizedBox(height: 15.h,),
-          const customTextField(txt: 'Content' , mx: 5 ,),
-          SizedBox(height: 30.h,),
-          const customButton(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 15.h,),
+            const customTextField(txt: 'Title',),
+            SizedBox(height: 15.h,),
+            const customTextField(txt: 'Content' , mx: 5 ,),
+            SizedBox(height: 50.h,),
+            const customButton(),
+            SizedBox(height: 15.h,),
+          ],
+        ),
       ),
     );
   }
