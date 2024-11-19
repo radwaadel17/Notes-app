@@ -1,8 +1,11 @@
 import 'package:app/Notes%20view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hive_flutter/adapters.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('Notes');
   runApp(const NoteApp());
 }
 
