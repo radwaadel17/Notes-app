@@ -7,7 +7,7 @@ class customTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      maxLines: mx,
+      maxLines:mx,
       cursorColor: const Color(0xff62FCD7),
       decoration: InputDecoration(
         hintText: txt,
@@ -18,6 +18,7 @@ class customTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.white),
           borderRadius: BorderRadius.circular(10.r),
+          
         ),
        // labelText: 'Text',
       ),
