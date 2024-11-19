@@ -1,4 +1,5 @@
 import 'package:app/widgets/CustomTextField.dart';
+import 'package:app/widgets/customButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class customButtomsheet extends StatelessWidget {
@@ -14,8 +15,11 @@ class customButtomsheet extends StatelessWidget {
           const customTextField(txt: 'Title',),
           SizedBox(height: 15.h,),
           const customTextField(txt: 'Content' , mx: 5 ,),
+          SizedBox(height: 30.h,),
+          const customButton(),
         ],
       ),
     );
   }
 }
+
