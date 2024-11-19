@@ -3,20 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
+  const CustomAppBar({super.key , required this.icon , required this.txt});
+  final String txt ;
+  final IconData icon ;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'Notes',
+          txt,
           style: TextStyle(
             fontSize: 20.sp,
           ),
         ),
         const Spacer(),
-        const CustomIcon(),
+        CustomIcon(icon: icon,),
       ],
     );
   }
