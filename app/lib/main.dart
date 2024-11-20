@@ -1,5 +1,5 @@
 import 'package:app/Notes%20view.dart';
-import 'package:app/cubits/Note%20cubit/Add_note_cubit.dart';
+import 'package:app/cubits/Add%20note%20cubit/Add_note_cubit.dart';
 import 'package:app/models/NoteModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

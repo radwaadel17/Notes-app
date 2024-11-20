@@ -1,4 +1,4 @@
-import 'package:app/cubits/Note%20cubit/Add_note_states.dart';
+import 'package:app/cubits/Add%20note%20cubit/Add_note_states.dart';
 import 'package:app/models/NoteModel.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
