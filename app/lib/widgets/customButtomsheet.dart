@@ -18,12 +18,11 @@ class _customButtomsheetState extends State<customButtomsheet> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-      child: BlocConsumer<AddNoteCubit ,  AddNoteState>(
+      child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
-          if(state is AddNoteSucsses){
+          if (state is AddNoteSucsses) {
             Navigator.pop(context);
-          }
-          else if (state is AddNoteFaluire){
+          } else if (state is AddNoteFaluire) {
             print(state.errorMessage);
           }
         },
