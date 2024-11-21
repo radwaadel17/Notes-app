@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
+// ignore: camel_case_types
 class customButtomsheet extends StatefulWidget {
   const customButtomsheet({super.key});
 
@@ -13,6 +14,7 @@ class customButtomsheet extends StatefulWidget {
   State<customButtomsheet> createState() => _customButtomsheetState();
 }
 
+// ignore: camel_case_types
 class _customButtomsheetState extends State<customButtomsheet> {
   @override
   Widget build(BuildContext context) {
@@ -25,15 +27,13 @@ class _customButtomsheetState extends State<customButtomsheet> {
             if (state is AddNoteSucsses) {
               Navigator.pop(context);
             } else if (state is AddNoteFaluire) {
+              // ignore: avoid_print
               print(state.errorMessage);
             }
           },
           builder: (context, state) {
-            return ModalProgressHUD(
-              inAsyncCall: state is AddNoteLoading ? true : false,
-              child: const SingleChildScrollView(
-                child: AddNoteForm(),
-              ),
+            return const SingleChildScrollView(
+              child: AddNoteForm(),
             );
           },
         ),
