@@ -26,8 +26,11 @@ class customButton extends StatelessWidget {
                 child: SizedBox(
                   height: 20,
                   width: 20,
-                  child: CircularProgressIndicator(
-                    color: Colors.black,
+                  child: AbsorbPointer(
+                    absorbing: true,
+                    child: CircularProgressIndicator(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               );
