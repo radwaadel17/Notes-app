@@ -38,7 +38,7 @@ class _ListViewOfColorsState extends State<ListViewOfColors> {
           onTap: (){
             selectedIndex = index ;
             selectedColor = colors[index];
-            BlocProvider.of<AddNoteCubit>(context).color = selectedColor;
+             BlocProvider.of<AddNoteCubit>(context).color = selectedColor;
             setState(() {
               
             });
