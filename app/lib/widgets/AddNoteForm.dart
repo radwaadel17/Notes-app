@@ -1,4 +1,5 @@
 import 'package:app/cubits/Add%20note%20cubit/Add_note_cubit.dart';
+import 'package:app/cubits/Notes%20cubit/Note%20cubit.dart';
 import 'package:app/models/NoteModel.dart';
 import 'package:app/widgets/CustomTextField.dart';
 import 'package:app/widgets/customButton.dart';
@@ -58,6 +59,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     date: '${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}',
                     color: Colors.blue.value);
                 BlocProvider.of<AddNoteCubit>(context).addNote(note);
+                BlocProvider.of<NoteCubit>(context).FetchAllNotes();
               } else {
                 autovalidateMode = AutovalidateMode.always;
                 setState(() {});
