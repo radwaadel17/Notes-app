@@ -12,6 +12,7 @@ class NoteView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
        showModalBottomSheet(
+        isScrollControlled: true,
         backgroundColor: const Color.fromARGB(255, 26, 26, 26),
         context: context, builder: (context){
             return const customButtomsheet();

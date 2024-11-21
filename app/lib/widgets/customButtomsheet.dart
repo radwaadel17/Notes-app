@@ -21,7 +21,8 @@ class _customButtomsheetState extends State<customButtomsheet> {
     return BlocProvider(
       create: (context) => AddNoteCubit(),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        padding: EdgeInsets.only(top: 16.w, right: 16.h , left: 16.w , bottom: MediaQuery.of(context).viewInsets.bottom),
+        
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
             if (state is AddNoteSucsses) {
