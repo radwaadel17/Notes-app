@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key , required this.icon , required this.txt});
+  const CustomAppBar({super.key , required this.icon , required this.txt, this.onTap});
   final String txt ;
   final IconData icon ;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        CustomIcon(icon: icon,),
+        CustomIcon(icon: icon, onTap: onTap,),
       ],
     );
   }
