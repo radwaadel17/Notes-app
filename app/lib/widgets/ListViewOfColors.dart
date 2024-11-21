@@ -1,5 +1,9 @@
+import 'package:app/cubits/Add%20note%20cubit/Add_note_cubit.dart';
+import 'package:app/cubits/Notes%20cubit/Note%20cubit.dart';
+import 'package:app/main.dart';
 import 'package:app/widgets/ContainerColor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ListViewOfColors extends StatefulWidget {
@@ -34,10 +38,10 @@ class _ListViewOfColorsState extends State<ListViewOfColors> {
           onTap: (){
             selectedIndex = index ;
             selectedColor = colors[index];
+            BlocProvider.of<AddNoteCubit>(context).color = selectedColor;
             setState(() {
               
             });
-
           },
           child: ContainerColor(
             ch: ch,
